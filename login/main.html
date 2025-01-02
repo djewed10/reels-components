@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary Login Page</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Login Card -->
+    <div class="container">
+        <div class="login-card" data-tilt>
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+            
+                <div class="input-group">
+                    <label for="email"><i class="icon">📧</i> Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password"><i class="icon">🔒</i> Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
+                </div>
+                <button type="submit" class="legendary-button">Login</button>
+            </form>
+            <div class="register">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.3,
+        });
+    </script>
+</body>
+</html>
